@@ -72,7 +72,7 @@ namespace Introduction
                     {
                         if (years > 0) monthes += (12 * years);
 
-                        int month = startDate.Month + 1;
+                        int month = startDate.Month == 12 ? 1 : startDate.Month + 1;
                         int year = startDate.Year;
                         for (int i = monthes; i > 0; i--)
                         {
