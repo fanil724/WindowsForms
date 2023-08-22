@@ -39,6 +39,7 @@ namespace Introduction
             this.btnClose.Visible = true;
             this.btnHideControls.Visible = true;
             this.cbShowDate.Visible = true;
+            this.btnDateCalculator.Visible = true;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -51,17 +52,8 @@ namespace Introduction
             this.btnClose.Visible = false;
             this.btnHideControls.Visible = false;
             this.cbShowDate.Visible = false;
+            this.btnDateCalculator.Visible = false;
         }
-
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Minimized)
-                this.WindowState = FormWindowState.Normal;
-
-            this.Activate();
-        }
-
-
 
         private void itemShowDate_CheckedChanged(object sender, EventArgs e)
         {
@@ -89,6 +81,12 @@ namespace Introduction
                 cbShowDate.Checked = false;
                 showDateToolStripMenuItem.Checked = false;
             }
+        }
+
+        private void btnDateCalculator_Click(object sender, EventArgs e)
+        {
+            DateCalculator dc = new DateCalculator();
+            dc.ShowDialog(this);
         }
     }
 }

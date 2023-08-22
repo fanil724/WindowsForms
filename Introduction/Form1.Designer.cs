@@ -37,13 +37,15 @@ namespace Introduction
             this.btnClose = new System.Windows.Forms.Button();
             this.btnHideControls = new System.Windows.Forms.Button();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.sysTry = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showDateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showControlsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hideControlsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.contextMenuStrip.SuspendLayout();
+            this.btnDateCalculator = new System.Windows.Forms.Button();
+            this.sysTry.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
@@ -76,7 +78,7 @@ namespace Introduction
             this.cbShowDate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbShowDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbShowDate.ForeColor = System.Drawing.Color.Black;
-            this.cbShowDate.Location = new System.Drawing.Point(36, 246);
+            this.cbShowDate.Location = new System.Drawing.Point(36, 219);
             this.cbShowDate.Name = "cbShowDate";
             this.cbShowDate.Size = new System.Drawing.Size(185, 41);
             this.cbShowDate.TabIndex = 1;
@@ -88,9 +90,9 @@ namespace Introduction
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnClose.Location = new System.Drawing.Point(36, 383);
+            this.btnClose.Location = new System.Drawing.Point(36, 401);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(227, 46);
+            this.btnClose.Size = new System.Drawing.Size(262, 46);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -100,9 +102,9 @@ namespace Introduction
             // btnHideControls
             // 
             this.btnHideControls.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnHideControls.Location = new System.Drawing.Point(36, 318);
+            this.btnHideControls.Location = new System.Drawing.Point(36, 339);
             this.btnHideControls.Name = "btnHideControls";
-            this.btnHideControls.Size = new System.Drawing.Size(227, 46);
+            this.btnHideControls.Size = new System.Drawing.Size(262, 46);
             this.btnHideControls.TabIndex = 3;
             this.btnHideControls.Text = "Hide Controls";
             this.btnHideControls.UseVisualStyleBackColor = true;
@@ -112,21 +114,21 @@ namespace Introduction
             // notifyIcon1
             // 
             this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip;
+            this.notifyIcon1.ContextMenuStrip = this.sysTry;
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "Clock by Fanil";
             this.notifyIcon1.Visible = true;
-            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
-            // contextMenuStrip
+            // sysTry
             // 
-            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sysTry.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showDateToolStripMenuItem,
             this.showControlsToolStripMenuItem,
             this.hideControlsToolStripMenuItem,
+            this.toolStripSeparator1,
             this.exitToolStripMenuItem});
-            this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(150, 92);
+            this.sysTry.Name = "contextMenuStrip";
+            this.sysTry.Size = new System.Drawing.Size(150, 98);
             // 
             // showDateToolStripMenuItem
             // 
@@ -149,6 +151,11 @@ namespace Introduction
             this.hideControlsToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.hideControlsToolStripMenuItem.Text = "Hide controls";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(146, 6);
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
@@ -163,12 +170,25 @@ namespace Introduction
             this.splitContainer1.Size = new System.Drawing.Size(150, 100);
             this.splitContainer1.TabIndex = 4;
             // 
+            // btnDateCalculator
+            // 
+            this.btnDateCalculator.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDateCalculator.Location = new System.Drawing.Point(36, 278);
+            this.btnDateCalculator.Name = "btnDateCalculator";
+            this.btnDateCalculator.Size = new System.Drawing.Size(262, 43);
+            this.btnDateCalculator.TabIndex = 5;
+            this.btnDateCalculator.Text = "Date calculator";
+            this.btnDateCalculator.UseVisualStyleBackColor = true;
+            this.btnDateCalculator.Visible = false;
+            this.btnDateCalculator.Click += new System.EventHandler(this.btnDateCalculator_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(364, 459);
+            this.Controls.Add(this.btnDateCalculator);
             this.Controls.Add(this.btnHideControls);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.cbShowDate);
@@ -182,7 +202,7 @@ namespace Introduction
             this.TopMost = true;
             this.TransparencyKey = System.Drawing.SystemColors.Control;
             this.Load += new System.EventHandler(this.timer1_Tick);
-            this.contextMenuStrip.ResumeLayout(false);
+            this.sysTry.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -199,11 +219,13 @@ namespace Introduction
         private System.Windows.Forms.Button btnHideControls;
         private NotifyIcon notifyIcon1;
         private SplitContainer splitContainer1;
-        private ContextMenuStrip contextMenuStrip;
+        private ContextMenuStrip sysTry;
         private ToolStripMenuItem showDateToolStripMenuItem;
         private ToolStripMenuItem showControlsToolStripMenuItem;
-        private ToolStripMenuItem hideControlsToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
+        private ToolStripMenuItem hideControlsToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator1;
+        private Button btnDateCalculator;
     }
 }
 
