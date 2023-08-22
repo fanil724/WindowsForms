@@ -71,9 +71,16 @@ namespace Introduction
                 case "Days":
                     {
                         if (years > 0) monthes += (12 * years);
+                        int month = 0, year = 0;
+                        if (startDate.Month == 12)
+                        {
+                            month = 1; year = startDate.Year + 1;
+                        }
+                        else
+                        {
+                            month = startDate.Month + 1; year = startDate.Year;
+                        }
 
-                        int month = startDate.Month == 12 ? 1 : startDate.Month + 1;
-                        int year = startDate.Year;
                         for (int i = monthes; i > 0; i--)
                         {
                             days += DateTime.DaysInMonth(year, month);
